@@ -106,4 +106,3 @@ venv.bak/
 #idea ignore
 .idea
 *.iml
-*.test
