@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
+import unittest
+
+import pytest
 from selenium.webdriver.firefox.webdriver import WebDriver
-from selenium.webdriver.common.action_chains import ActionChains
-import time, unittest
 
 
 def is_alert_present(driver):
@@ -18,7 +19,6 @@ class test_add_group(unittest.TestCase):
         self.driver.implicitly_wait(60)
 
     def test_test_add_group(self):
-        success = True
         driver = self.driver
         driver.get("http://localhost/addressbook/")
         driver.find_element_by_name("user").clear()
@@ -47,4 +47,4 @@ class test_add_group(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    pytest.main()
